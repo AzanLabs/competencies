@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TO DO TASK</title>
+		<script src="build/bscript.js">
+		</script>
+		<script>
+		function onClickAdd(x){
+		text=document.getElementById(x).value;
+		var x=document.getElementById("main1");
+		x.innerHTML += '<br>' + text;
+	    document.getElementById("task").value='';
+		return false;
+		};
+		function onClickClear(){
+		document.getElementById("main1").innerHTML='';
+		};
+		</script> 
+
+	</head>
+	<body>
+		<div id="main">Hi..Enter your task here!!</div>
+		<textarea id="task" name="task" autofocus onfocus="if(this.value=='A new value') this.value='';"></textarea>
+		<button onclick="onClickAdd('task')">Enter</button>
+		<button onclick="onClickClear()">Clear All</button>
+		<div id="main1"></div>
+	</body>
+</html>
